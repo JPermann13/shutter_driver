@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "NM LST400 Shutter Driver"
-Date ""
+Date "5.21.19"
 Rev "2.0"
 Comp "CSU Ultra Cold"
 Comment1 ""
@@ -502,8 +502,8 @@ $EndComp
 Connection ~ 4300 2500
 Wire Wire Line
 	4300 2500 4300 2800
-Text Notes 4650 3100 0    50   ~ 0
-Short cap through .1-1k resistor\nusing test points before removing\ncard 
+Text Notes 4500 3000 0    50   ~ 0
+Short cap through .1-1k \nresistor with TP 1 and 2
 Wire Wire Line
 	4300 2800 5450 2800
 Connection ~ 4300 2800
@@ -727,7 +727,7 @@ F 1 "Q_PMOS_GDS" V 3302 2050 50  0000 C CNN
 F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 3250 2150 50  0001 C CNN
 F 3 "~" H 3050 2050 50  0001 C CNN
 	1    3050 2050
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	2400 1950 2850 1950

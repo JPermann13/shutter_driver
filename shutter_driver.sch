@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "NM LST400 Shutter Driver"
 Date "5.21.19"
-Rev "2.0"
+Rev "2.1"
 Comp "CSU Ultra Cold"
 Comment1 ""
 Comment2 ""
@@ -252,8 +252,8 @@ $Comp
 L 74xGxx:74AHC1G86 U6
 U 1 1 5C953346
 P 7600 4950
-F 0 "U6" H 7600 5275 50  0000 C CNN
-F 1 "SN74LVC1G86" H 7600 5184 50  0000 C CNN
+F 0 "U6" H 7550 4950 50  0000 C CNN
+F 1 "SN74LVC1G86" H 7300 5150 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 7600 4950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g86.pdf" H 7600 4950 50  0001 C CNN
 	1    7600 4950
@@ -393,8 +393,8 @@ $Comp
 L 74xGxx:74AHC1G86 U9
 U 1 1 5C97A9A3
 P 10250 2900
-F 0 "U9" V 10204 3088 50  0000 L CNN
-F 1 "SN74LVC1G86" V 10295 3088 50  0000 L CNN
+F 0 "U9" V 10200 2850 50  0000 L CNN
+F 1 "SN74LVC1G86" V 10050 3000 50  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 10250 2900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC86" H 10250 2900 50  0001 C CNN
 	1    10250 2900
@@ -451,7 +451,7 @@ $EndComp
 Text Label 10250 3200 3    50   ~ 0
 SIG
 Text Notes 9050 5950 0    50   ~ 0
-Pot sets interupt trigger point. \n2.5 v is good starting point
+Pot sets interupt trigger point. \n2.5v is good starting point
 $Comp
 L Connector:TestPoint_Probe TP4
 U 1 1 5C9953E3
@@ -907,7 +907,7 @@ F 3 "" H 2850 5350 50  0001 C CNN
 $EndComp
 Text Label 2250 5150 1    50   ~ 0
 SHUTTER_RET
-Text Notes 9600 4450 0    50   ~ 0
+Text Notes 7450 5450 0    50   ~ 0
 RC network sets interupt time
 $Comp
 L power:+5V #PWR0106
@@ -924,8 +924,6 @@ Text Notes 9800 1550 1    50   ~ 0
 LED_G+
 Text Label 9900 1800 3    50   ~ 0
 LED_G-
-Text Notes 9850 1100 0    50   ~ 0
-RC network sets interupt time
 $Comp
 L Connector:Screw_Terminal_01x06 J4
 U 1 1 5CB9B0F0
@@ -1086,23 +1084,23 @@ $EndComp
 $Comp
 L power:+5V #PWR0112
 U 1 1 5CB4EB9D
-P 7600 4850
-F 0 "#PWR0112" H 7600 4700 50  0001 C CNN
-F 1 "+5V" H 7615 5023 50  0000 C CNN
-F 2 "" H 7600 4850 50  0001 C CNN
-F 3 "" H 7600 4850 50  0001 C CNN
-	1    7600 4850
+P 7600 4650
+F 0 "#PWR0112" H 7600 4500 50  0001 C CNN
+F 1 "+5V" H 7500 4700 50  0000 C CNN
+F 2 "" H 7600 4650 50  0001 C CNN
+F 3 "" H 7600 4650 50  0001 C CNN
+	1    7600 4650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0113
 U 1 1 5CB4FC33
-P 10350 2900
-F 0 "#PWR0113" H 10350 2750 50  0001 C CNN
-F 1 "+5V" V 10365 3028 50  0000 L CNN
-F 2 "" H 10350 2900 50  0001 C CNN
-F 3 "" H 10350 2900 50  0001 C CNN
-	1    10350 2900
+P 10400 2900
+F 0 "#PWR0113" H 10400 2750 50  0001 C CNN
+F 1 "+5V" V 10415 3028 50  0000 L CNN
+F 2 "" H 10400 2900 50  0001 C CNN
+F 3 "" H 10400 2900 50  0001 C CNN
+	1    10400 2900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1110,4 +1108,77 @@ Wire Wire Line
 Connection ~ 10250 3150
 Wire Wire Line
 	10250 3150 10250 3200
+$Comp
+L Device:C C2
+U 1 1 5CE5325D
+P 7750 4650
+F 0 "C2" V 7498 4650 50  0000 C CNN
+F 1 ".1u" V 7589 4650 50  0000 C CNN
+F 2 "" H 7788 4500 50  0001 C CNN
+F 3 "~" H 7750 4650 50  0001 C CNN
+	1    7750 4650
+	0    1    1    0   
+$EndComp
+Connection ~ 7600 4650
+$Comp
+L power:GND #PWR0114
+U 1 1 5CE5337A
+P 7900 4650
+F 0 "#PWR0114" H 7900 4400 50  0001 C CNN
+F 1 "GND" V 7905 4522 50  0000 R CNN
+F 2 "" H 7900 4650 50  0001 C CNN
+F 3 "" H 7900 4650 50  0001 C CNN
+	1    7900 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5CE535B0
+P 10400 3050
+F 0 "C7" V 10550 3050 50  0000 C CNN
+F 1 ".1u" V 10450 3150 50  0000 C CNN
+F 2 "" H 10438 2900 50  0001 C CNN
+F 3 "~" H 10400 3050 50  0001 C CNN
+	1    10400 3050
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5CE535B7
+P 10400 3200
+F 0 "#PWR0115" H 10400 2950 50  0001 C CNN
+F 1 "GND" V 10405 3072 50  0000 R CNN
+F 2 "" H 10400 3200 50  0001 C CNN
+F 3 "" H 10400 3200 50  0001 C CNN
+	1    10400 3200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 2900 10400 2900
+Connection ~ 10400 2900
+$Comp
+L Device:C C4
+U 1 1 5CE5D1DA
+P 8700 4750
+F 0 "C4" V 8448 4750 50  0000 C CNN
+F 1 ".1u" V 8539 4750 50  0000 C CNN
+F 2 "" H 8738 4600 50  0001 C CNN
+F 3 "~" H 8700 4750 50  0001 C CNN
+	1    8700 4750
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5CE5D1E1
+P 8550 4750
+F 0 "#PWR0116" H 8550 4500 50  0001 C CNN
+F 1 "GND" H 8555 4577 50  0000 C CNN
+F 2 "" H 8550 4750 50  0001 C CNN
+F 3 "" H 8550 4750 50  0001 C CNN
+	1    8550 4750
+	1    0    0    1   
+$EndComp
+Connection ~ 8850 4750
+Wire Wire Line
+	7600 4650 7600 4850
 $EndSCHEMATC
