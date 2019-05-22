@@ -398,7 +398,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74HC86" H 10250 2900 50  0001 C CNN
 	1    10250 2900
 	0    1    1    0   
 $EndComp
-Text Label 10200 2600 1    50   ~ 0
+Text Label 10200 2450 1    50   ~ 0
 SIG_IN
 $Comp
 L Device:R R9
@@ -1149,7 +1149,7 @@ Connection ~ 10400 2900
 Wire Wire Line
 	10400 2900 10450 2900
 Wire Wire Line
-	4300 2450 4300 2800
+	4300 2450 4300 2550
 Wire Wire Line
 	4300 2800 4300 3000
 Text Label 4300 2950 0    50   ~ 0
@@ -1177,4 +1177,47 @@ F 3 "" H 8550 4750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 8850 4750
+Wire Wire Line
+	10200 2600 10200 2550
+$Comp
+L Connector:TestPoint_Probe TP2
+U 1 1 5CE6E424
+P 10200 2550
+F 0 "TP2" H 10500 2650 50  0000 R CNN
+F 1 "gate_bypass" H 10850 2550 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 10400 2550 50  0001 C CNN
+F 3 "~" H 10400 2550 50  0001 C CNN
+	1    10200 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 2550 10200 2450
+Connection ~ 10200 2550
+$Comp
+L Connector:TestPoint_Probe TP3
+U 1 1 5CE6E50A
+P 10250 3100
+F 0 "TP3" H 10600 3200 50  0000 R CNN
+F 1 "gate_bypass" H 10950 3100 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.2mm" H 10450 3100 50  0001 C CNN
+F 3 "~" H 10450 3100 50  0001 C CNN
+	1    10250 3100
+	-1   0    0    1   
+$EndComp
+Text Notes 8800 2800 0    50   ~ 0
+If only using 5V, bypass gate
+$Comp
+L Connector:TestPoint_Probe TP6
+U 1 1 5CE73A6C
+P 4300 2550
+F 0 "TP6" H 4450 2700 50  0000 L CNN
+F 1 "CAP_SHORT" H 4450 2600 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4500 2550 50  0001 C CNN
+F 3 "~" H 4500 2550 50  0001 C CNN
+	1    4300 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 4300 2550
+Wire Wire Line
+	4300 2550 4300 2800
 $EndSCHEMATC
