@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ac1e086e-b681-47f3-97c3-39ff5b1d306a
+C:\Users\Physlab121\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|ac535357-26d1-461a-b764-167c2cf03708
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a11dfe0e-55d3-47c7-b02f-09d40ef1202f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fa1df83d-4dbe-4128-84eb-26a8218a9c7b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a870d87e-1f8c-461c-8988-a97f04a0eeca
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|8c784e9d-0cdc-41a4-9ff8-58a2e1e0f704
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|4148999d-faec-41a4-8fbe-eb4ebf8806fd
+C:\Users\Physlab121\Desktop\Joseph\Kicad\shutter_driver\shutter_controller_v2.cydsn\shutter_controller_v2.cyprj|838ebfe2-b31e-476d-ba9b-06c00a7ebbab
