@@ -2,7 +2,7 @@
 --	Conversion of shutter_controller_v2.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Dec 19 20:29:51 2019
+--	Mon Dec 23 20:09:30 2019
 --
 
 USE cypress.cypress.all;
@@ -483,14 +483,11 @@ SIGNAL tmpFB_0__en_5_net_0 : bit;
 SIGNAL tmpIO_0__en_5_net_0 : bit;
 TERMINAL tmpSIOVREF__en_5_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__en_5_net_0 : bit;
-SIGNAL Net_225 : bit;
-SIGNAL Net_245 : bit;
-SIGNAL Net_266 : bit;
-SIGNAL Net_12 : bit;
-SIGNAL Net_313 : bit;
+SIGNAL Net_391 : bit;
+SIGNAL Net_385 : bit;
+SIGNAL Net_10 : bit;
 SIGNAL \Timer_1:TimerUDB:ClockOutFromEnBlock\ : bit;
-SIGNAL \Timer_1:TimerUDB:ctrl_enable\ : bit;
-SIGNAL \Timer_1:TimerUDB:ctrl_ten\ : bit;
+SIGNAL \Timer_1:TimerUDB:Clk_Ctl_i\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_7\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_6\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_5\ : bit;
@@ -499,6 +496,8 @@ SIGNAL \Timer_1:TimerUDB:control_3\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_2\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_1\ : bit;
 SIGNAL \Timer_1:TimerUDB:control_0\ : bit;
+SIGNAL \Timer_1:TimerUDB:ctrl_enable\ : bit;
+SIGNAL \Timer_1:TimerUDB:ctrl_ten\ : bit;
 SIGNAL \Timer_1:TimerUDB:ctrl_cmode_1\ : bit;
 SIGNAL \Timer_1:TimerUDB:ctrl_cmode_0\ : bit;
 SIGNAL \Timer_1:TimerUDB:ctrl_tmode_1\ : bit;
@@ -517,10 +516,15 @@ SIGNAL \Timer_1:TimerUDB:per_zero\ : bit;
 SIGNAL \Timer_1:TimerUDB:tc_i\ : bit;
 SIGNAL \Timer_1:TimerUDB:tc_reg_i\ : bit;
 SIGNAL \Timer_1:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL Net_12 : bit;
 SIGNAL \Timer_1:TimerUDB:capture_out_reg_i\ : bit;
-SIGNAL Net_227 : bit;
+SIGNAL Net_376 : bit;
 SIGNAL \Timer_1:TimerUDB:capt_fifo_load_int\ : bit;
 SIGNAL \Timer_1:TimerUDB:runmode_enable\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_last\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_rise_detected\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_fall_detected\ : bit;
+SIGNAL \Timer_1:TimerUDB:trigger_polarized\ : bit;
 SIGNAL \Timer_1:TimerUDB:trig_reg\ : bit;
 SIGNAL \Timer_1:TimerUDB:status_6\ : bit;
 SIGNAL \Timer_1:TimerUDB:status_5\ : bit;
@@ -531,7 +535,7 @@ SIGNAL \Timer_1:TimerUDB:status_2\ : bit;
 SIGNAL \Timer_1:TimerUDB:fifo_full\ : bit;
 SIGNAL \Timer_1:TimerUDB:status_3\ : bit;
 SIGNAL \Timer_1:TimerUDB:fifo_nempty\ : bit;
-SIGNAL Net_223 : bit;
+SIGNAL Net_372 : bit;
 SIGNAL \Timer_1:TimerUDB:cs_addr_2\ : bit;
 SIGNAL \Timer_1:TimerUDB:cs_addr_1\ : bit;
 SIGNAL \Timer_1:TimerUDB:cs_addr_0\ : bit;
@@ -671,6 +675,9 @@ SIGNAL \Timer_1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Timer_1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
 SIGNAL \Timer_1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Timer_1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL Net_390 : bit;
+SIGNAL cy_srff_1 : bit;
+SIGNAL Net_245 : bit;
 SIGNAL tmpOE__Interrupt_Out_net_0 : bit;
 SIGNAL tmpFB_0__Interrupt_Out_net_0 : bit;
 SIGNAL tmpIO_0__Interrupt_Out_net_0 : bit;
@@ -697,6 +704,10 @@ SIGNAL \Timer_1:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Timer_1:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Timer_1:TimerUDB:hwEnable_reg\\D\ : bit;
 SIGNAL \Timer_1:TimerUDB:capture_out_reg_i\\D\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_last\\D\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_rise_detected\\D\ : bit;
+SIGNAL \Timer_1:TimerUDB:trig_fall_detected\\D\ : bit;
+SIGNAL cy_srff_1D : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -733,17 +744,30 @@ Net_352 <= ((Net_360 and Net_355));
 Net_195 <= (not Net_355
 	OR not Net_360);
 
-Net_225 <= ((not Net_187 and Net_360 and Net_355)
+Net_385 <= ((not Net_187 and Net_360 and Net_355)
 	OR (not Net_355 and Net_187)
 	OR (not Net_360 and Net_187));
 
-Net_245 <= ((not Net_187 and Net_360 and Net_355 and Net_266)
-	OR (not Net_355 and Net_187 and Net_266)
-	OR (not Net_360 and Net_187 and Net_266));
+\Timer_1:TimerUDB:status_tc\ <= ((\Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:per_zero\ and \Timer_1:TimerUDB:trig_rise_detected\));
 
-\Timer_1:TimerUDB:status_tc\ <= ((not Net_187 and Net_360 and Net_355 and \Timer_1:TimerUDB:per_zero\)
-	OR (not Net_355 and Net_187 and \Timer_1:TimerUDB:per_zero\)
-	OR (not Net_360 and Net_187 and \Timer_1:TimerUDB:per_zero\));
+\Timer_1:TimerUDB:trig_rise_detected\\D\ <= ((not Net_187 and not Net_12 and not \Timer_1:TimerUDB:trig_last\ and Net_360 and Net_355 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\)
+	OR (not Net_355 and not Net_12 and not \Timer_1:TimerUDB:trig_last\ and Net_187 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\)
+	OR (not Net_360 and not Net_12 and not \Timer_1:TimerUDB:trig_last\ and Net_187 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\)
+	OR (not Net_12 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_rise_detected\));
+
+\Timer_1:TimerUDB:trig_fall_detected\\D\ <= ((not Net_12 and Net_360 and Net_187 and Net_355 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_last\)
+	OR (not Net_187 and not Net_355 and not Net_12 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_last\)
+	OR (not Net_360 and not Net_187 and not Net_12 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_last\)
+	OR (not Net_12 and \Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_fall_detected\));
+
+\Timer_1:TimerUDB:trig_reg\ <= ((\Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:control_4\ and \Timer_1:TimerUDB:trig_rise_detected\));
+
+cy_srff_1D <= ((not Net_187 and Net_360 and Net_355 and cy_srff_1)
+	OR (not Net_187 and Net_360 and Net_355 and Net_12)
+	OR (not Net_355 and Net_187 and cy_srff_1)
+	OR (not Net_360 and Net_187 and cy_srff_1)
+	OR (not Net_355 and Net_187 and Net_12)
+	OR (not Net_360 and Net_187 and Net_12));
 
 comp_in:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
@@ -1440,20 +1464,45 @@ en_5:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__comp_in_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__en_5_net_0);
+Clock_1:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"0a31be46-a34b-49fc-8948-a4d9bfccb04d",
+		source_clock_id=>"413DE2EF-D9F2-4233-A808-DFAF137FD877",
+		divisor=>0,
+		period=>"0",
+		is_direct=>'1',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_391,
+		dig_domain_out=>open);
 \Timer_1:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
-	PORT MAP(clock_in=>Net_313,
+	PORT MAP(clock_in=>Net_10,
 		enable=>tmpOE__comp_in_net_0,
 		clock_out=>\Timer_1:TimerUDB:ClockOutFromEnBlock\);
+\Timer_1:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_10,
+		enable=>tmpOE__comp_in_net_0,
+		clock_out=>\Timer_1:TimerUDB:Clk_Ctl_i\);
+\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"11111111",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>\Timer_1:TimerUDB:Clk_Ctl_i\,
+		control=>(\Timer_1:TimerUDB:control_7\, \Timer_1:TimerUDB:control_6\, \Timer_1:TimerUDB:control_5\, \Timer_1:TimerUDB:control_4\,
+			\Timer_1:TimerUDB:control_3\, \Timer_1:TimerUDB:control_2\, \Timer_1:TimerUDB:control_1\, \Timer_1:TimerUDB:control_0\));
 \Timer_1:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"0000011",
 		cy_int_mask=>"1111111")
-	PORT MAP(reset=>zero,
+	PORT MAP(reset=>Net_12,
 		clock=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
 		status=>(zero, zero, zero, \Timer_1:TimerUDB:status_3\,
 			\Timer_1:TimerUDB:status_2\, zero, \Timer_1:TimerUDB:status_tc\),
-		interrupt=>Net_223);
+		interrupt=>Net_372);
 \Timer_1:TimerUDB:sT16:timerdp:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
 		d0_init=>"00000000",
@@ -1478,7 +1527,7 @@ en_5:cy_psoc3_pins_v1_10
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, Net_225, \Timer_1:TimerUDB:per_zero\),
+		cs_addr=>(Net_12, \Timer_1:TimerUDB:trig_reg\, \Timer_1:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -1564,7 +1613,7 @@ en_5:cy_psoc3_pins_v1_10
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(zero, Net_225, \Timer_1:TimerUDB:per_zero\),
+		cs_addr=>(Net_12, \Timer_1:TimerUDB:trig_reg\, \Timer_1:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -1683,7 +1732,7 @@ Interrupt_Out:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__comp_in_net_0),
-		y=>Net_245,
+		y=>cy_srff_1,
 		fb=>(tmpFB_0__Interrupt_Out_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__Interrupt_Out_net_0),
@@ -1698,13 +1747,13 @@ Interrupt_Out:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Interrupt_Out_net_0);
 microsecond_clock_1:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
-		id=>"eeddb4e9-7677-492f-8f5f-16d58963e49b",
+		id=>"0709047c-ed76-46bf-893b-5178ca7bcf45",
 		source_clock_id=>"",
 		divisor=>0,
 		period=>"1000000000",
 		is_direct=>'0',
 		is_digital=>'1')
-	PORT MAP(clock_out=>Net_313,
+	PORT MAP(clock_out=>Net_10,
 		dig_domain_out=>open);
 \start_pulse:PWMUDB:min_kill_reg\:cy_dsrff
 	PORT MAP(d=>tmpOE__comp_in_net_0,
@@ -1799,14 +1848,30 @@ microsecond_clock_1:cy_clock_v1_0
 \Timer_1:TimerUDB:tc_reg_i\:cy_dff
 	PORT MAP(d=>\Timer_1:TimerUDB:status_tc\,
 		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
-		q=>Net_266);
+		q=>Net_12);
 \Timer_1:TimerUDB:hwEnable_reg\:cy_dff
-	PORT MAP(d=>Net_225,
+	PORT MAP(d=>\Timer_1:TimerUDB:control_7\,
 		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Timer_1:TimerUDB:hwEnable_reg\);
 \Timer_1:TimerUDB:capture_out_reg_i\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
 		q=>\Timer_1:TimerUDB:capture_out_reg_i\);
+\Timer_1:TimerUDB:trig_last\:cy_dff
+	PORT MAP(d=>Net_385,
+		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_1:TimerUDB:trig_last\);
+\Timer_1:TimerUDB:trig_rise_detected\:cy_dff
+	PORT MAP(d=>\Timer_1:TimerUDB:trig_rise_detected\\D\,
+		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_1:TimerUDB:trig_rise_detected\);
+\Timer_1:TimerUDB:trig_fall_detected\:cy_dff
+	PORT MAP(d=>\Timer_1:TimerUDB:trig_fall_detected\\D\,
+		clk=>\Timer_1:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_1:TimerUDB:trig_fall_detected\);
+cy_srff_1:cy_dff
+	PORT MAP(d=>cy_srff_1D,
+		clk=>Net_391,
+		q=>cy_srff_1);
 
 END R_T_L;

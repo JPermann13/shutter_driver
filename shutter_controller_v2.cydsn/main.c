@@ -19,6 +19,7 @@ int main(void)
     start_pulse_Start();
     microsecond_clock_Start();
     Timer_1_Start();
+    microsecond_clock_1_Start();
     
     for(;;)
     {

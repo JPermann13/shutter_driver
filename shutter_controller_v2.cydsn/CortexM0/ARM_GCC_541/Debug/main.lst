@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 1
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 1
   39              	@ 16 "main.c" 1
   40 0002 62B6     		CPSIE   i
   41              	@ 0 "" 2
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 2
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 2
 
 
   17:main.c        **** 
@@ -77,378 +77,397 @@ ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 1
   50              		.loc 1 21 0
   51 000c FFF7FEFF 		bl	Timer_1_Start
   52              	.LVL2:
-  53              	.L2:
-  54 0010 FEE7     		b	.L2
-  55              		.cfi_endproc
-  56              	.LFE32:
-  57              		.size	main, .-main
-  58 0012 C046     		.text
-  59              	.Letext0:
-  60              		.file 2 "Generated_Source\\PSoC4/start_pulse.h"
-  61              		.file 3 "Generated_Source\\PSoC4/microsecond_clock.h"
-  62              		.file 4 "Generated_Source\\PSoC4/Timer_1.h"
-  63              		.section	.debug_info,"",%progbits
-  64              	.Ldebug_info0:
-  65 0000 E1000000 		.4byte	0xe1
-  66 0004 0400     		.2byte	0x4
-  67 0006 00000000 		.4byte	.Ldebug_abbrev0
-  68 000a 04       		.byte	0x4
-  69 000b 01       		.uleb128 0x1
-  70 000c 05010000 		.4byte	.LASF17
-  71 0010 0C       		.byte	0xc
-  72 0011 1B000000 		.4byte	.LASF18
-  73 0015 27000000 		.4byte	.LASF19
-  74 0019 00000000 		.4byte	.Ldebug_ranges0+0
-  75 001d 00000000 		.4byte	0
-  76 0021 00000000 		.4byte	.Ldebug_line0
-  77 0025 02       		.uleb128 0x2
-  78 0026 01       		.byte	0x1
-  79 0027 06       		.byte	0x6
-  80 0028 A6010000 		.4byte	.LASF0
-  81 002c 02       		.uleb128 0x2
-  82 002d 01       		.byte	0x1
-  83 002e 08       		.byte	0x8
-  84 002f D0000000 		.4byte	.LASF1
-  85 0033 02       		.uleb128 0x2
-  86 0034 02       		.byte	0x2
-  87 0035 05       		.byte	0x5
-  88 0036 BE010000 		.4byte	.LASF2
-  89 003a 02       		.uleb128 0x2
-  90 003b 02       		.byte	0x2
-  91 003c 07       		.byte	0x7
-  92 003d 93010000 		.4byte	.LASF3
-  93 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 3
+  22:main.c        ****     microsecond_clock_1_Start();
+  53              		.loc 1 22 0
+  54 0010 FFF7FEFF 		bl	microsecond_clock_1_Start
+  55              	.LVL3:
+  56              	.L2:
+  57 0014 FEE7     		b	.L2
+  58              		.cfi_endproc
+  59              	.LFE32:
+  60              		.size	main, .-main
+  61 0016 C046     		.text
+  62              	.Letext0:
+  63              		.file 2 "Generated_Source\\PSoC4/start_pulse.h"
+  64              		.file 3 "Generated_Source\\PSoC4/microsecond_clock.h"
+  65              		.file 4 "Generated_Source\\PSoC4/Timer_1.h"
+  66              		.file 5 "Generated_Source\\PSoC4/microsecond_clock_1.h"
+  67              		.section	.debug_info,"",%progbits
+  68              	.Ldebug_info0:
+  69 0000 F5000000 		.4byte	0xf5
+  70 0004 0400     		.2byte	0x4
+  71 0006 00000000 		.4byte	.Ldebug_abbrev0
+  72 000a 04       		.byte	0x4
+  73 000b 01       		.uleb128 0x1
+  74 000c 1F010000 		.4byte	.LASF18
+  75 0010 0C       		.byte	0xc
+  76 0011 1B000000 		.4byte	.LASF19
+  77 0015 27000000 		.4byte	.LASF20
+  78 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  79 001d 00000000 		.4byte	0
+  80 0021 00000000 		.4byte	.Ldebug_line0
+  81 0025 02       		.uleb128 0x2
+  82 0026 01       		.byte	0x1
+  83 0027 06       		.byte	0x6
+  84 0028 C0010000 		.4byte	.LASF0
+  85 002c 02       		.uleb128 0x2
+  86 002d 01       		.byte	0x1
+  87 002e 08       		.byte	0x8
+  88 002f D0000000 		.4byte	.LASF1
+  89 0033 02       		.uleb128 0x2
+  90 0034 02       		.byte	0x2
+  91 0035 05       		.byte	0x5
+  92 0036 D8010000 		.4byte	.LASF2
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 3
 
 
-  94 0042 04       		.byte	0x4
-  95 0043 05       		.byte	0x5
-  96 0044 E3000000 		.4byte	.LASF4
-  97 0048 02       		.uleb128 0x2
-  98 0049 04       		.byte	0x4
-  99 004a 07       		.byte	0x7
- 100 004b 7B000000 		.4byte	.LASF5
- 101 004f 02       		.uleb128 0x2
- 102 0050 08       		.byte	0x8
- 103 0051 05       		.byte	0x5
- 104 0052 00000000 		.4byte	.LASF6
- 105 0056 02       		.uleb128 0x2
- 106 0057 08       		.byte	0x8
- 107 0058 07       		.byte	0x7
- 108 0059 8D000000 		.4byte	.LASF7
- 109 005d 03       		.uleb128 0x3
- 110 005e 04       		.byte	0x4
- 111 005f 05       		.byte	0x5
- 112 0060 696E7400 		.ascii	"int\000"
- 113 0064 02       		.uleb128 0x2
- 114 0065 04       		.byte	0x4
- 115 0066 07       		.byte	0x7
- 116 0067 0E000000 		.4byte	.LASF8
- 117 006b 02       		.uleb128 0x2
- 118 006c 04       		.byte	0x4
- 119 006d 04       		.byte	0x4
- 120 006e BC000000 		.4byte	.LASF9
- 121 0072 02       		.uleb128 0x2
- 122 0073 08       		.byte	0x8
- 123 0074 04       		.byte	0x4
- 124 0075 FE000000 		.4byte	.LASF10
- 125 0079 02       		.uleb128 0x2
- 126 007a 01       		.byte	0x1
- 127 007b 08       		.byte	0x8
- 128 007c DE000000 		.4byte	.LASF11
- 129 0080 02       		.uleb128 0x2
- 130 0081 08       		.byte	0x8
- 131 0082 04       		.byte	0x4
- 132 0083 B2010000 		.4byte	.LASF12
- 133 0087 02       		.uleb128 0x2
- 134 0088 04       		.byte	0x4
- 135 0089 07       		.byte	0x7
- 136 008a C8010000 		.4byte	.LASF13
- 137 008e 04       		.uleb128 0x4
- 138 008f 22000000 		.4byte	.LASF20
- 139 0093 01       		.byte	0x1
- 140 0094 0E       		.byte	0xe
- 141 0095 5D000000 		.4byte	0x5d
- 142 0099 00000000 		.4byte	.LFB32
- 143 009d 12000000 		.4byte	.LFE32-.LFB32
- 144 00a1 01       		.uleb128 0x1
- 145 00a2 9C       		.byte	0x9c
- 146 00a3 C3000000 		.4byte	0xc3
- 147 00a7 05       		.uleb128 0x5
- 148 00a8 08000000 		.4byte	.LVL0
- 149 00ac C3000000 		.4byte	0xc3
- 150 00b0 05       		.uleb128 0x5
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 4
+  93 003a 02       		.uleb128 0x2
+  94 003b 02       		.byte	0x2
+  95 003c 07       		.byte	0x7
+  96 003d AD010000 		.4byte	.LASF3
+  97 0041 02       		.uleb128 0x2
+  98 0042 04       		.byte	0x4
+  99 0043 05       		.byte	0x5
+ 100 0044 FD000000 		.4byte	.LASF4
+ 101 0048 02       		.uleb128 0x2
+ 102 0049 04       		.byte	0x4
+ 103 004a 07       		.byte	0x7
+ 104 004b 7B000000 		.4byte	.LASF5
+ 105 004f 02       		.uleb128 0x2
+ 106 0050 08       		.byte	0x8
+ 107 0051 05       		.byte	0x5
+ 108 0052 00000000 		.4byte	.LASF6
+ 109 0056 02       		.uleb128 0x2
+ 110 0057 08       		.byte	0x8
+ 111 0058 07       		.byte	0x7
+ 112 0059 8D000000 		.4byte	.LASF7
+ 113 005d 03       		.uleb128 0x3
+ 114 005e 04       		.byte	0x4
+ 115 005f 05       		.byte	0x5
+ 116 0060 696E7400 		.ascii	"int\000"
+ 117 0064 02       		.uleb128 0x2
+ 118 0065 04       		.byte	0x4
+ 119 0066 07       		.byte	0x7
+ 120 0067 0E000000 		.4byte	.LASF8
+ 121 006b 02       		.uleb128 0x2
+ 122 006c 04       		.byte	0x4
+ 123 006d 04       		.byte	0x4
+ 124 006e BC000000 		.4byte	.LASF9
+ 125 0072 02       		.uleb128 0x2
+ 126 0073 08       		.byte	0x8
+ 127 0074 04       		.byte	0x4
+ 128 0075 18010000 		.4byte	.LASF10
+ 129 0079 02       		.uleb128 0x2
+ 130 007a 01       		.byte	0x1
+ 131 007b 08       		.byte	0x8
+ 132 007c DE000000 		.4byte	.LASF11
+ 133 0080 02       		.uleb128 0x2
+ 134 0081 08       		.byte	0x8
+ 135 0082 04       		.byte	0x4
+ 136 0083 CC010000 		.4byte	.LASF12
+ 137 0087 02       		.uleb128 0x2
+ 138 0088 04       		.byte	0x4
+ 139 0089 07       		.byte	0x7
+ 140 008a E2010000 		.4byte	.LASF13
+ 141 008e 04       		.uleb128 0x4
+ 142 008f 22000000 		.4byte	.LASF21
+ 143 0093 01       		.byte	0x1
+ 144 0094 0E       		.byte	0xe
+ 145 0095 5D000000 		.4byte	0x5d
+ 146 0099 00000000 		.4byte	.LFB32
+ 147 009d 16000000 		.4byte	.LFE32-.LFB32
+ 148 00a1 01       		.uleb128 0x1
+ 149 00a2 9C       		.byte	0x9c
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 4
 
 
- 151 00b1 0C000000 		.4byte	.LVL1
- 152 00b5 CE000000 		.4byte	0xce
- 153 00b9 05       		.uleb128 0x5
- 154 00ba 10000000 		.4byte	.LVL2
- 155 00be D9000000 		.4byte	0xd9
- 156 00c2 00       		.byte	0
- 157 00c3 06       		.uleb128 0x6
- 158 00c4 EC000000 		.4byte	.LASF14
- 159 00c8 EC000000 		.4byte	.LASF14
- 160 00cc 02       		.byte	0x2
- 161 00cd 92       		.byte	0x92
- 162 00ce 06       		.uleb128 0x6
- 163 00cf A4000000 		.4byte	.LASF15
- 164 00d3 A4000000 		.4byte	.LASF15
- 165 00d7 03       		.byte	0x3
- 166 00d8 23       		.byte	0x23
- 167 00d9 06       		.uleb128 0x6
- 168 00da C2000000 		.4byte	.LASF16
- 169 00de C2000000 		.4byte	.LASF16
- 170 00e2 04       		.byte	0x4
- 171 00e3 5A       		.byte	0x5a
- 172 00e4 00       		.byte	0
- 173              		.section	.debug_abbrev,"",%progbits
- 174              	.Ldebug_abbrev0:
- 175 0000 01       		.uleb128 0x1
- 176 0001 11       		.uleb128 0x11
- 177 0002 01       		.byte	0x1
- 178 0003 25       		.uleb128 0x25
- 179 0004 0E       		.uleb128 0xe
- 180 0005 13       		.uleb128 0x13
- 181 0006 0B       		.uleb128 0xb
- 182 0007 03       		.uleb128 0x3
- 183 0008 0E       		.uleb128 0xe
- 184 0009 1B       		.uleb128 0x1b
- 185 000a 0E       		.uleb128 0xe
- 186 000b 55       		.uleb128 0x55
- 187 000c 17       		.uleb128 0x17
- 188 000d 11       		.uleb128 0x11
- 189 000e 01       		.uleb128 0x1
- 190 000f 10       		.uleb128 0x10
- 191 0010 17       		.uleb128 0x17
- 192 0011 00       		.byte	0
- 193 0012 00       		.byte	0
- 194 0013 02       		.uleb128 0x2
- 195 0014 24       		.uleb128 0x24
- 196 0015 00       		.byte	0
- 197 0016 0B       		.uleb128 0xb
- 198 0017 0B       		.uleb128 0xb
- 199 0018 3E       		.uleb128 0x3e
- 200 0019 0B       		.uleb128 0xb
- 201 001a 03       		.uleb128 0x3
- 202 001b 0E       		.uleb128 0xe
- 203 001c 00       		.byte	0
- 204 001d 00       		.byte	0
- 205 001e 03       		.uleb128 0x3
- 206 001f 24       		.uleb128 0x24
- 207 0020 00       		.byte	0
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 5
+ 150 00a3 CC000000 		.4byte	0xcc
+ 151 00a7 05       		.uleb128 0x5
+ 152 00a8 08000000 		.4byte	.LVL0
+ 153 00ac CC000000 		.4byte	0xcc
+ 154 00b0 05       		.uleb128 0x5
+ 155 00b1 0C000000 		.4byte	.LVL1
+ 156 00b5 D7000000 		.4byte	0xd7
+ 157 00b9 05       		.uleb128 0x5
+ 158 00ba 10000000 		.4byte	.LVL2
+ 159 00be E2000000 		.4byte	0xe2
+ 160 00c2 05       		.uleb128 0x5
+ 161 00c3 14000000 		.4byte	.LVL3
+ 162 00c7 ED000000 		.4byte	0xed
+ 163 00cb 00       		.byte	0
+ 164 00cc 06       		.uleb128 0x6
+ 165 00cd 06010000 		.4byte	.LASF14
+ 166 00d1 06010000 		.4byte	.LASF14
+ 167 00d5 02       		.byte	0x2
+ 168 00d6 92       		.byte	0x92
+ 169 00d7 06       		.uleb128 0x6
+ 170 00d8 A4000000 		.4byte	.LASF15
+ 171 00dc A4000000 		.4byte	.LASF15
+ 172 00e0 03       		.byte	0x3
+ 173 00e1 23       		.byte	0x23
+ 174 00e2 06       		.uleb128 0x6
+ 175 00e3 C2000000 		.4byte	.LASF16
+ 176 00e7 C2000000 		.4byte	.LASF16
+ 177 00eb 04       		.byte	0x4
+ 178 00ec 5A       		.byte	0x5a
+ 179 00ed 06       		.uleb128 0x6
+ 180 00ee E3000000 		.4byte	.LASF17
+ 181 00f2 E3000000 		.4byte	.LASF17
+ 182 00f6 05       		.byte	0x5
+ 183 00f7 23       		.byte	0x23
+ 184 00f8 00       		.byte	0
+ 185              		.section	.debug_abbrev,"",%progbits
+ 186              	.Ldebug_abbrev0:
+ 187 0000 01       		.uleb128 0x1
+ 188 0001 11       		.uleb128 0x11
+ 189 0002 01       		.byte	0x1
+ 190 0003 25       		.uleb128 0x25
+ 191 0004 0E       		.uleb128 0xe
+ 192 0005 13       		.uleb128 0x13
+ 193 0006 0B       		.uleb128 0xb
+ 194 0007 03       		.uleb128 0x3
+ 195 0008 0E       		.uleb128 0xe
+ 196 0009 1B       		.uleb128 0x1b
+ 197 000a 0E       		.uleb128 0xe
+ 198 000b 55       		.uleb128 0x55
+ 199 000c 17       		.uleb128 0x17
+ 200 000d 11       		.uleb128 0x11
+ 201 000e 01       		.uleb128 0x1
+ 202 000f 10       		.uleb128 0x10
+ 203 0010 17       		.uleb128 0x17
+ 204 0011 00       		.byte	0
+ 205 0012 00       		.byte	0
+ 206 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 5
 
 
- 208 0021 0B       		.uleb128 0xb
- 209 0022 0B       		.uleb128 0xb
- 210 0023 3E       		.uleb128 0x3e
- 211 0024 0B       		.uleb128 0xb
- 212 0025 03       		.uleb128 0x3
- 213 0026 08       		.uleb128 0x8
- 214 0027 00       		.byte	0
- 215 0028 00       		.byte	0
- 216 0029 04       		.uleb128 0x4
- 217 002a 2E       		.uleb128 0x2e
- 218 002b 01       		.byte	0x1
- 219 002c 3F       		.uleb128 0x3f
- 220 002d 19       		.uleb128 0x19
- 221 002e 03       		.uleb128 0x3
- 222 002f 0E       		.uleb128 0xe
- 223 0030 3A       		.uleb128 0x3a
- 224 0031 0B       		.uleb128 0xb
- 225 0032 3B       		.uleb128 0x3b
- 226 0033 0B       		.uleb128 0xb
- 227 0034 27       		.uleb128 0x27
- 228 0035 19       		.uleb128 0x19
- 229 0036 49       		.uleb128 0x49
- 230 0037 13       		.uleb128 0x13
- 231 0038 8701     		.uleb128 0x87
- 232 003a 19       		.uleb128 0x19
- 233 003b 11       		.uleb128 0x11
- 234 003c 01       		.uleb128 0x1
- 235 003d 12       		.uleb128 0x12
- 236 003e 06       		.uleb128 0x6
- 237 003f 40       		.uleb128 0x40
- 238 0040 18       		.uleb128 0x18
- 239 0041 9742     		.uleb128 0x2117
- 240 0043 19       		.uleb128 0x19
- 241 0044 01       		.uleb128 0x1
- 242 0045 13       		.uleb128 0x13
- 243 0046 00       		.byte	0
- 244 0047 00       		.byte	0
- 245 0048 05       		.uleb128 0x5
- 246 0049 898201   		.uleb128 0x4109
- 247 004c 00       		.byte	0
- 248 004d 11       		.uleb128 0x11
- 249 004e 01       		.uleb128 0x1
- 250 004f 31       		.uleb128 0x31
- 251 0050 13       		.uleb128 0x13
- 252 0051 00       		.byte	0
- 253 0052 00       		.byte	0
- 254 0053 06       		.uleb128 0x6
- 255 0054 2E       		.uleb128 0x2e
- 256 0055 00       		.byte	0
- 257 0056 3F       		.uleb128 0x3f
- 258 0057 19       		.uleb128 0x19
- 259 0058 3C       		.uleb128 0x3c
- 260 0059 19       		.uleb128 0x19
- 261 005a 6E       		.uleb128 0x6e
- 262 005b 0E       		.uleb128 0xe
- 263 005c 03       		.uleb128 0x3
- 264 005d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 6
+ 207 0014 24       		.uleb128 0x24
+ 208 0015 00       		.byte	0
+ 209 0016 0B       		.uleb128 0xb
+ 210 0017 0B       		.uleb128 0xb
+ 211 0018 3E       		.uleb128 0x3e
+ 212 0019 0B       		.uleb128 0xb
+ 213 001a 03       		.uleb128 0x3
+ 214 001b 0E       		.uleb128 0xe
+ 215 001c 00       		.byte	0
+ 216 001d 00       		.byte	0
+ 217 001e 03       		.uleb128 0x3
+ 218 001f 24       		.uleb128 0x24
+ 219 0020 00       		.byte	0
+ 220 0021 0B       		.uleb128 0xb
+ 221 0022 0B       		.uleb128 0xb
+ 222 0023 3E       		.uleb128 0x3e
+ 223 0024 0B       		.uleb128 0xb
+ 224 0025 03       		.uleb128 0x3
+ 225 0026 08       		.uleb128 0x8
+ 226 0027 00       		.byte	0
+ 227 0028 00       		.byte	0
+ 228 0029 04       		.uleb128 0x4
+ 229 002a 2E       		.uleb128 0x2e
+ 230 002b 01       		.byte	0x1
+ 231 002c 3F       		.uleb128 0x3f
+ 232 002d 19       		.uleb128 0x19
+ 233 002e 03       		.uleb128 0x3
+ 234 002f 0E       		.uleb128 0xe
+ 235 0030 3A       		.uleb128 0x3a
+ 236 0031 0B       		.uleb128 0xb
+ 237 0032 3B       		.uleb128 0x3b
+ 238 0033 0B       		.uleb128 0xb
+ 239 0034 27       		.uleb128 0x27
+ 240 0035 19       		.uleb128 0x19
+ 241 0036 49       		.uleb128 0x49
+ 242 0037 13       		.uleb128 0x13
+ 243 0038 8701     		.uleb128 0x87
+ 244 003a 19       		.uleb128 0x19
+ 245 003b 11       		.uleb128 0x11
+ 246 003c 01       		.uleb128 0x1
+ 247 003d 12       		.uleb128 0x12
+ 248 003e 06       		.uleb128 0x6
+ 249 003f 40       		.uleb128 0x40
+ 250 0040 18       		.uleb128 0x18
+ 251 0041 9742     		.uleb128 0x2117
+ 252 0043 19       		.uleb128 0x19
+ 253 0044 01       		.uleb128 0x1
+ 254 0045 13       		.uleb128 0x13
+ 255 0046 00       		.byte	0
+ 256 0047 00       		.byte	0
+ 257 0048 05       		.uleb128 0x5
+ 258 0049 898201   		.uleb128 0x4109
+ 259 004c 00       		.byte	0
+ 260 004d 11       		.uleb128 0x11
+ 261 004e 01       		.uleb128 0x1
+ 262 004f 31       		.uleb128 0x31
+ 263 0050 13       		.uleb128 0x13
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 6
 
 
- 265 005e 3A       		.uleb128 0x3a
- 266 005f 0B       		.uleb128 0xb
- 267 0060 3B       		.uleb128 0x3b
- 268 0061 0B       		.uleb128 0xb
- 269 0062 00       		.byte	0
- 270 0063 00       		.byte	0
- 271 0064 00       		.byte	0
- 272              		.section	.debug_aranges,"",%progbits
- 273 0000 1C000000 		.4byte	0x1c
- 274 0004 0200     		.2byte	0x2
- 275 0006 00000000 		.4byte	.Ldebug_info0
- 276 000a 04       		.byte	0x4
- 277 000b 00       		.byte	0
- 278 000c 0000     		.2byte	0
- 279 000e 0000     		.2byte	0
- 280 0010 00000000 		.4byte	.LFB32
- 281 0014 12000000 		.4byte	.LFE32-.LFB32
- 282 0018 00000000 		.4byte	0
- 283 001c 00000000 		.4byte	0
- 284              		.section	.debug_ranges,"",%progbits
- 285              	.Ldebug_ranges0:
- 286 0000 00000000 		.4byte	.LFB32
- 287 0004 12000000 		.4byte	.LFE32
- 288 0008 00000000 		.4byte	0
- 289 000c 00000000 		.4byte	0
- 290              		.section	.debug_line,"",%progbits
- 291              	.Ldebug_line0:
- 292 0000 82000000 		.section	.debug_str,"MS",%progbits,1
- 292      02006900 
- 292      00000201 
- 292      FB0E0D00 
- 292      01010101 
- 293              	.LASF6:
- 294 0000 6C6F6E67 		.ascii	"long long int\000"
- 294      206C6F6E 
- 294      6720696E 
- 294      7400
- 295              	.LASF8:
- 296 000e 756E7369 		.ascii	"unsigned int\000"
- 296      676E6564 
- 296      20696E74 
- 296      00
- 297              	.LASF18:
- 298 001b 6D61696E 		.ascii	"main.c\000"
- 298      2E6300
- 299              	.LASF20:
- 300 0022 6D61696E 		.ascii	"main\000"
- 300      00
- 301              	.LASF19:
- 302 0027 433A5C55 		.ascii	"C:\\Users\\Physlab121\\Desktop\\Joseph\\Kicad\\shut"
- 302      73657273 
- 302      5C506879 
- 302      736C6162 
- 302      3132315C 
- 303 0054 7465725F 		.ascii	"ter_driver\\shutter_controller_v2.cydsn\000"
- 303      64726976 
- 303      65725C73 
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 7
+ 264 0051 00       		.byte	0
+ 265 0052 00       		.byte	0
+ 266 0053 06       		.uleb128 0x6
+ 267 0054 2E       		.uleb128 0x2e
+ 268 0055 00       		.byte	0
+ 269 0056 3F       		.uleb128 0x3f
+ 270 0057 19       		.uleb128 0x19
+ 271 0058 3C       		.uleb128 0x3c
+ 272 0059 19       		.uleb128 0x19
+ 273 005a 6E       		.uleb128 0x6e
+ 274 005b 0E       		.uleb128 0xe
+ 275 005c 03       		.uleb128 0x3
+ 276 005d 0E       		.uleb128 0xe
+ 277 005e 3A       		.uleb128 0x3a
+ 278 005f 0B       		.uleb128 0xb
+ 279 0060 3B       		.uleb128 0x3b
+ 280 0061 0B       		.uleb128 0xb
+ 281 0062 00       		.byte	0
+ 282 0063 00       		.byte	0
+ 283 0064 00       		.byte	0
+ 284              		.section	.debug_aranges,"",%progbits
+ 285 0000 1C000000 		.4byte	0x1c
+ 286 0004 0200     		.2byte	0x2
+ 287 0006 00000000 		.4byte	.Ldebug_info0
+ 288 000a 04       		.byte	0x4
+ 289 000b 00       		.byte	0
+ 290 000c 0000     		.2byte	0
+ 291 000e 0000     		.2byte	0
+ 292 0010 00000000 		.4byte	.LFB32
+ 293 0014 16000000 		.4byte	.LFE32-.LFB32
+ 294 0018 00000000 		.4byte	0
+ 295 001c 00000000 		.4byte	0
+ 296              		.section	.debug_ranges,"",%progbits
+ 297              	.Ldebug_ranges0:
+ 298 0000 00000000 		.4byte	.LFB32
+ 299 0004 16000000 		.4byte	.LFE32
+ 300 0008 00000000 		.4byte	0
+ 301 000c 00000000 		.4byte	0
+ 302              		.section	.debug_line,"",%progbits
+ 303              	.Ldebug_line0:
+ 304 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
+ 304      02008200 
+ 304      00000201 
+ 304      FB0E0D00 
+ 304      01010101 
+ 305              	.LASF6:
+ 306 0000 6C6F6E67 		.ascii	"long long int\000"
+ 306      206C6F6E 
+ 306      6720696E 
+ 306      7400
+ 307              	.LASF8:
+ 308 000e 756E7369 		.ascii	"unsigned int\000"
+ 308      676E6564 
+ 308      20696E74 
+ 308      00
+ 309              	.LASF19:
+ 310 001b 6D61696E 		.ascii	"main.c\000"
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 7
 
 
- 303      68757474 
- 303      65725F63 
- 304              	.LASF5:
- 305 007b 6C6F6E67 		.ascii	"long unsigned int\000"
- 305      20756E73 
- 305      69676E65 
- 305      6420696E 
- 305      7400
- 306              	.LASF7:
- 307 008d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 307      206C6F6E 
- 307      6720756E 
- 307      7369676E 
- 307      65642069 
- 308              	.LASF15:
- 309 00a4 6D696372 		.ascii	"microsecond_clock_Start\000"
- 309      6F736563 
- 309      6F6E645F 
- 309      636C6F63 
- 309      6B5F5374 
- 310              	.LASF9:
- 311 00bc 666C6F61 		.ascii	"float\000"
- 311      7400
- 312              	.LASF16:
- 313 00c2 54696D65 		.ascii	"Timer_1_Start\000"
- 313      725F315F 
- 313      53746172 
- 313      7400
- 314              	.LASF1:
- 315 00d0 756E7369 		.ascii	"unsigned char\000"
- 315      676E6564 
- 315      20636861 
- 315      7200
- 316              	.LASF11:
- 317 00de 63686172 		.ascii	"char\000"
- 317      00
- 318              	.LASF4:
- 319 00e3 6C6F6E67 		.ascii	"long int\000"
- 319      20696E74 
- 319      00
- 320              	.LASF14:
- 321 00ec 73746172 		.ascii	"start_pulse_Start\000"
- 321      745F7075 
- 321      6C73655F 
- 321      53746172 
- 321      7400
- 322              	.LASF10:
- 323 00fe 646F7562 		.ascii	"double\000"
- 323      6C6500
- 324              	.LASF17:
- 325 0105 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 325      43313120 
- 325      352E342E 
- 325      31203230 
- 325      31363036 
- 326 0138 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 326      20726576 
-ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccbZAqFf.s 			page 8
+ 310      2E6300
+ 311              	.LASF21:
+ 312 0022 6D61696E 		.ascii	"main\000"
+ 312      00
+ 313              	.LASF20:
+ 314 0027 433A5C55 		.ascii	"C:\\Users\\Physlab121\\Desktop\\Joseph\\Kicad\\shut"
+ 314      73657273 
+ 314      5C506879 
+ 314      736C6162 
+ 314      3132315C 
+ 315 0054 7465725F 		.ascii	"ter_driver\\shutter_controller_v2.cydsn\000"
+ 315      64726976 
+ 315      65725C73 
+ 315      68757474 
+ 315      65725F63 
+ 316              	.LASF5:
+ 317 007b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 317      20756E73 
+ 317      69676E65 
+ 317      6420696E 
+ 317      7400
+ 318              	.LASF7:
+ 319 008d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 319      206C6F6E 
+ 319      6720756E 
+ 319      7369676E 
+ 319      65642069 
+ 320              	.LASF15:
+ 321 00a4 6D696372 		.ascii	"microsecond_clock_Start\000"
+ 321      6F736563 
+ 321      6F6E645F 
+ 321      636C6F63 
+ 321      6B5F5374 
+ 322              	.LASF9:
+ 323 00bc 666C6F61 		.ascii	"float\000"
+ 323      7400
+ 324              	.LASF16:
+ 325 00c2 54696D65 		.ascii	"Timer_1_Start\000"
+ 325      725F315F 
+ 325      53746172 
+ 325      7400
+ 326              	.LASF1:
+ 327 00d0 756E7369 		.ascii	"unsigned char\000"
+ 327      676E6564 
+ 327      20636861 
+ 327      7200
+ 328              	.LASF11:
+ 329 00de 63686172 		.ascii	"char\000"
+ 329      00
+ 330              	.LASF17:
+ 331 00e3 6D696372 		.ascii	"microsecond_clock_1_Start\000"
+ 331      6F736563 
+ 331      6F6E645F 
+ 331      636C6F63 
+ 331      6B5F315F 
+ 332              	.LASF4:
+ 333 00fd 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\PHYSLA~1\AppData\Local\Temp\ccx8mfzv.s 			page 8
 
 
- 326      6973696F 
- 326      6E203233 
- 326      37373135 
- 327 016b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 327      66756E63 
- 327      74696F6E 
- 327      2D736563 
- 327      74696F6E 
- 328              	.LASF3:
- 329 0193 73686F72 		.ascii	"short unsigned int\000"
- 329      7420756E 
- 329      7369676E 
- 329      65642069 
- 329      6E7400
- 330              	.LASF0:
- 331 01a6 7369676E 		.ascii	"signed char\000"
- 331      65642063 
- 331      68617200 
- 332              	.LASF12:
- 333 01b2 6C6F6E67 		.ascii	"long double\000"
- 333      20646F75 
- 333      626C6500 
- 334              	.LASF2:
- 335 01be 73686F72 		.ascii	"short int\000"
- 335      7420696E 
+ 333      20696E74 
+ 333      00
+ 334              	.LASF14:
+ 335 0106 73746172 		.ascii	"start_pulse_Start\000"
+ 335      745F7075 
+ 335      6C73655F 
+ 335      53746172 
  335      7400
- 336              	.LASF13:
- 337 01c8 73697A65 		.ascii	"sizetype\000"
- 337      74797065 
- 337      00
- 338              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 336              	.LASF10:
+ 337 0118 646F7562 		.ascii	"double\000"
+ 337      6C6500
+ 338              	.LASF18:
+ 339 011f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 339      43313120 
+ 339      352E342E 
+ 339      31203230 
+ 339      31363036 
+ 340 0152 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 340      20726576 
+ 340      6973696F 
+ 340      6E203233 
+ 340      37373135 
+ 341 0185 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 341      66756E63 
+ 341      74696F6E 
+ 341      2D736563 
+ 341      74696F6E 
+ 342              	.LASF3:
+ 343 01ad 73686F72 		.ascii	"short unsigned int\000"
+ 343      7420756E 
+ 343      7369676E 
+ 343      65642069 
+ 343      6E7400
+ 344              	.LASF0:
+ 345 01c0 7369676E 		.ascii	"signed char\000"
+ 345      65642063 
+ 345      68617200 
+ 346              	.LASF12:
+ 347 01cc 6C6F6E67 		.ascii	"long double\000"
+ 347      20646F75 
+ 347      626C6500 
+ 348              	.LASF2:
+ 349 01d8 73686F72 		.ascii	"short int\000"
+ 349      7420696E 
+ 349      7400
+ 350              	.LASF13:
+ 351 01e2 73697A65 		.ascii	"sizetype\000"
+ 351      74797065 
+ 351      00
+ 352              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
